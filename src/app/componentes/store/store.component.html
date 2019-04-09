@@ -1,0 +1,92 @@
+<div class="container-fluid">
+
+  <div id="sidebar" class="shadow-sm mb-4 p-1 text-left animated slideInUp">
+
+    
+    <div>
+
+      <div  class="pb-3 text-center ">
+        <hr>
+        <strong>Productos</strong>
+        <hr>
+      </div>
+
+
+      <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio1" name="Productos" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio1">Anillos</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio2" name="Productos" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio2">Pulseras</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio3" name="Productos" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio3">Dijes</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio4" name="Productos" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio4">collares</label>
+          </div>
+  </div>
+
+  <div class="mt-4">
+      
+    
+      <div  class="pb-3 text-center">
+          <hr>
+          <strong>Material</strong>
+          <hr>
+        </div>
+
+      <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio5">Plata</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio6">Oro</label>
+        </div>
+  </div>
+
+
+
+  <div class="mt-4">
+      
+      <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1">
+          <label class="custom-control-label" for="customSwitch1">New Collection</label>
+        </div>
+  </div>
+
+
+  </div>
+
+
+  <div class="col-8 mx-auto  text-left pt-4 animated slideInLeft">
+      <h4 class="ml-5 mt-4">Productos</h4>
+      <hr>
+      </div>
+
+
+  <div id="store" class="pb-5 col-8 m-auto row bounce">
+
+
+  <div id="producto" class="card m-2 shadow-sm animated jackInTheBox" style="width: 16rem;" *ngFor="let producto of productos">
+      <div><span class="badge badge-dark">{{producto.data.precio | currency:'$'}}</span> </div>
+      <img [src]="producto.data.fotos" class="card-img-top " alt="...">
+      <div class="card-body">
+        
+        
+        <button href="#" class="btn btn-dark btn-block "[routerLink]= " ['/producto', producto.id] ">Comprar</button>
+      </div>
+    </div>
+
+    
+
+
+  </div>  
+
+
+
+</div>

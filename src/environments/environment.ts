@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+
+    apiKey: 'AIzaSyBYAj-HjtwRJbyOsKWggmuseBtaVPDCtGE',
+    authDomain: 'verbania-57605.firebaseapp.com',
+    databaseURL: 'https://verbania-57605.firebaseio.com',
+    projectId: 'verbania-57605',
+    storageBucket: 'verbania-57605.appspot.com',
+    messagingSenderId: '490846341459'
+
+  }
 };
 
 /*
