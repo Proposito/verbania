@@ -17,21 +17,16 @@ import { ROUTING } from './app.routes';
 
 // Componentes
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './componentes/navbar/navbar.component';
-import { HomeComponent } from './componentes/home/home.component';
-import { FooterComponent } from './componentes/footer/footer.component';
-import { StoreComponent } from './componentes/store/store.component';
+
+
 import { ProductoComponent } from './componentes/producto/producto.component';
+import { CompartidoModule } from './compartido/compartido.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    FooterComponent,
-    StoreComponent,
     ProductoComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -39,7 +34,8 @@ import { ProductoComponent } from './componentes/producto/producto.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    CompartidoModule
 
   ],
   providers: [FirebaseService],
